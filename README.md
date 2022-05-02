@@ -1,0 +1,2 @@
+# RDKitUtils
+Utilities using RDKit

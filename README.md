@@ -1,5 +1,5 @@
 # RDKitUtils
-Utilities using [RDKit](https://www.rdkit.org/)
+Utilities using [RDKit](https://www.rdkit.org/).
 
 **Language: Python**
 
@@ -8,7 +8,7 @@ Utilities using [RDKit](https://www.rdkit.org/)
 **RDKit version: Q32017**
 
 ## Why
-I collect here a series of utilities using RDKit (Open-Source Cheminformatics Software):
+I collected here a series of utilities using RDKit (Open-Source Cheminformatics Software):
 
 - drawMolecule.py: draw a molecule
 - printAtomBond.py: print atoms and bonds of a SMILES molecule

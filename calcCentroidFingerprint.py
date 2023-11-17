@@ -6,8 +6,8 @@ import numpy as np
 # %%
 # load data and calculate fingerprint
 mySMILES = ['CCCCF', 'C1CCCCC1', 'C(=O)CN']
-pos_mols = [Chem.MolFromSmiles(SMILES) for SMILES in mySMILES]
-fps = [Chem.rdMolDescriptors.GetMorganFingerprintAsBitVect(m, 3, 512) for m in pos_mols]
+mols = [Chem.MolFromSmiles(SMILES) for SMILES in mySMILES]
+fps = [Chem.rdMolDescriptors.GetMorganFingerprintAsBitVect(m, 3, 512) for m in mols]
 
 # %%
 # in case only a subset must be selected

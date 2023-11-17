@@ -21,3 +21,24 @@ I collected here a series of utilities using RDKit (Open-Source Cheminformatics 
 - testAddMoleculeColumnToFrame: test of _AddMoleculeColumnToFrame_ function to add a Molecule column to a Pandas dataframe (also molecules shown using _Draw.MolsToGridImage_)
 - testMaxMinPicker: test of diversity and similarity pickers functions (e.g., _HierarchicalClusterPicker_)
 - testSmilesMolSupplier: test of the _SmilesMolSupplier_ function
+
+## Code example
+
+#### Load molecules and calculate fingerprints:
+```python
+mySMILES = ['CCCCF', 'C1CCCCC1', 'C(=O)CN']
+mols = [Chem.MolFromSmiles(SMILES) for SMILES in mySMILES]
+fps = [Chem.rdMolDescriptors.GetMorganFingerprintAsBitVect(m, 3, 512) for m in mols]
+```
+
+#### Calculate molecular descriptor MW:
+```python
+import rdkit.Chem.Descriptors as Descriptors
+MW = Descriptors.ExactMolWt(mol)
+```
+
+#### Draw a molecule
+```python
+Draw.MolToFile(mol, IMAGE_FILE_NAME, size=(1024, 768), fitImage=True)
+Draw.MolsToGridImage(mols, molsPerRow=3, subImgSize=(400, 400))
+```

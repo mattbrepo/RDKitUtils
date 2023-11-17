@@ -18,5 +18,6 @@ I collected here a series of utilities using RDKit (Open-Source Cheminformatics 
 - sanitizeMol: sanitize a SMILES molecule
 - sanitizeMolFile: sanitize a molecular file
 - testBulkTanimotoSimilarity: test of _BulkTanimotoSimilarity_ function while working on different Pandas dataset of molecules
+- testAddMoleculeColumnToFrame: test of _AddMoleculeColumnToFrame_ function to add a Molecule column to a Pandas dataframe (also molecules shown using _Draw.MolsToGridImage_)
 - testMaxMinPicker: test of diversity and similarity pickers functions (e.g., _HierarchicalClusterPicker_)
 - testSmilesMolSupplier: test of the _SmilesMolSupplier_ function

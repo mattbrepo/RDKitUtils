@@ -5,15 +5,17 @@ Utilities using [RDKit](https://www.rdkit.org/).
 
 **Start: 2021**
 
-**RDKit version: Q32017**
-
 ## Why
-I collected here a series of utilities using RDKit (Open-Source Cheminformatics Software):
+I collected here a series of utilities using RDKit (Open-Source Cheminformatics Software, version originally used: Q32017):
 
-- drawMolecule.py: draw a molecule
-- printAtomBond.py: print atoms and bonds of a SMILES molecule
-- printChiral.py: print chirality information of a SMILES molecule
+- calcCentroidFingerprint: calculate the centroid of a set of fingerprints
+- calcDescriptors: calculate some basic molecular descriptors
+- drawMolecule: draw a molecule (even with atom index)
+- exportExcelMolImage: export a Pandas dataframe with molecule image to Excel
+- printAtomBond: print atoms and bonds of a molecule
+- printChiral.py: print chirality information of a molecule
 - printPeriodicTable.py: print periodic table information
 - sanitizeMol.py: sanitize a SMILES molecule
-- sanitizeMolFile.py: sanitize a SMILES file
-- SMILES_Supplier.py: test of the _SmilesMolSupplier_ function
+- sanitizeMolFile.py: sanitize a molecular file
+- testMaxMinPicker: test of diversity and similarity pickers functions (e.g., _HierarchicalClusterPicker_)
+- testSmilesMolSupplier.py: test of the _SmilesMolSupplier_ function

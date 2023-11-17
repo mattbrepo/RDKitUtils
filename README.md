@@ -33,12 +33,39 @@ fps = [Chem.rdMolDescriptors.GetMorganFingerprintAsBitVect(m, 3, 512) for m in m
 
 #### Calculate molecular descriptor MW:
 ```python
+from rdkit.Chem import rdMolDescriptors
 import rdkit.Chem.Descriptors as Descriptors
 MW = Descriptors.ExactMolWt(mol)
 ```
 
 #### Draw a molecule
 ```python
+from rdkit.Chem import Draw
 Draw.MolToFile(mol, IMAGE_FILE_NAME, size=(1024, 768), fitImage=True)
 Draw.MolsToGridImage(mols, molsPerRow=3, subImgSize=(400, 400))
+```
+
+#### Loop on bonds
+```python
+bonds = mol.GetBonds()
+for i in range(len(bonds)):
+  bond = bonds[i]
+  a1 = bond.GetBeginAtomIdx()
+  a2 = bond.GetEndAtomIdx()
+  atom1 = mol.GetAtomWithIdx(a1)
+  atom2 = mol.GetAtomWithIdx(a2)
+```
+
+#### Sanitized and canonical SMILES
+```python
+mol = Chem.MolFromSmiles(SMILES, sanitize = True)
+Chem.MolToSmiles(mol)
+Chem.CanonSmiles(mol)
+```
+
+#### Compare two molecules
+```python
+mol1 = Chem.MolFromSmiles('Nc1ccccc1')
+mol2 = Chem.MolFromSmiles('c1c(N)cccc1')
+print(Chem.MolToSmiles(mol1) == Chem.MolToSmiles(mol2))
 ```

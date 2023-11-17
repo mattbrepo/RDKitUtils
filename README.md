@@ -13,9 +13,10 @@ I collected here a series of utilities using RDKit (Open-Source Cheminformatics 
 - drawMolecule: draw a molecule (even with atom index)
 - exportExcelMolImage: export a Pandas dataframe with molecule image to Excel
 - printAtomBond: print atoms and bonds of a molecule
-- printChiral.py: print chirality information of a molecule
-- printPeriodicTable.py: print periodic table information
-- sanitizeMol.py: sanitize a SMILES molecule
-- sanitizeMolFile.py: sanitize a molecular file
+- printChiral: print chirality information of a molecule
+- printPeriodicTable: print periodic table information
+- sanitizeMol: sanitize a SMILES molecule
+- sanitizeMolFile: sanitize a molecular file
+- testBulkTanimotoSimilarity: test of _BulkTanimotoSimilarity_ function while working on different Pandas dataset of molecules
 - testMaxMinPicker: test of diversity and similarity pickers functions (e.g., _HierarchicalClusterPicker_)
-- testSmilesMolSupplier.py: test of the _SmilesMolSupplier_ function
+- testSmilesMolSupplier: test of the _SmilesMolSupplier_ function

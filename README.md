@@ -72,8 +72,9 @@ print(Chem.MolToSmiles(mol1) == Chem.MolToSmiles(mol2))
 
 #### Export Excel file with molecule image
 
-**IMPORTANT: XlsxWriter needs to be installed (pip install XlsxWriter)**
 ```python
 df['MolImage'] = [Chem.MolFromSmiles(s) for s in df['SMILES']]
 PandasTools.SaveXlsxFromFrame(df, 'export.xlsx', molCol='MolImage', size=(100, 200))
 ```
+
+_IMPORTANT: XlsxWriter needs to be installed (pip install XlsxWriter)_
